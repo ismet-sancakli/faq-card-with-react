@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  width: 930px;
+  background-color: white;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 20px;
+  margin: 25px;
+  display: flex;
+}
+
+.image-container {
+  position: relative;
+  padding: 50px 0;
+  z-index: 1;
+  width: 45%;
+  overflow: hidden;
+}
+
+.second-img {
+  position: absolute;
+  top: -350px;
+  left: -580px;
+  z-index: -1;
+}
+
+.outher {
+  position: absolute;
+  top: 50%;
+  left: -1rem;
+  z-index: 2;
+  margin: -5rem;
+}
+
+.inner {
+  overflow: hidden;
+}
+
+.inner picture {
+  margin-left: -80px;
+}
+
+.faq-container {
+  padding: 50px;
+  width: 55%;
+  margin-left: auto;
+}
+
+.faq-container h2 {
+  color: hsl(238, 29%, 16%);
+  font-size: 28px;
+  padding-bottom: 20px;
+}
+
+.faq-container > div {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+.faq-container :last-child {
+  border-bottom-width: 0px;
+}
+
+.faq-container span {
+  float: right;
+  transition: 0.4s;
+  margin-left: auto;
+}
+
+label {
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  text-align: left;
+  padding: 15px 15px 15px 0px;
+  color: hsl(237, 12%, 33%);
+  transition: 0.4s;
+}
+
+label:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+input {
+  display: none;
+}
+
+.content {
+  padding: 5px 0 15px;
+  color: hsl(240, 6%, 50%);
+  font-size: 14px;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+input:checked ~ .content {
+  height: auto;
+  opacity: 1;
+  padding: 5px 0px 15px;
+}
+
+input:checked ~ label {
+  color: hsl(237, 12%, 33%);
+  font-weight: 700;
+}
+
+input:checked ~ label span {
+  transform: rotate(180deg);
+  transition: 0.4s;
+}
+
+@media (max-width: 890px) {
+  .container {
+    max-width: 450px;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 120px;
+    flex-direction: column;
+  }
+  .image-container {
+    padding: 0;
+    margin: 0 auto;
+    width: 30%;
+    margin-top: -110px;
+    overflow: visible;
+  }
+  .inner {
+    overflow: visible;
+  }
+  .outher {
+    display: none;
+  }
+  .second-img {
+    top: 100px;
+    left: -50px;
+  }
+  .faq-container {
+    padding: 50px;
+    width: auto;
+  }
+  .faq-container h2 {
+    text-align: center;
+  }
+}
