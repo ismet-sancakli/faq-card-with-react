@@ -1,7 +1,7 @@
 function Banner(props) {
     return (
         <>
-      <img className="outher" src={props.image}/>
+      <img className="outher" src= "./images/illustration-box-desktop.svg" alt=""/>
       <div className="image-container">
       <div className="inner">
         <picture>

@@ -5,7 +5,7 @@ import FaqItem from './components/FaqItem';
 function App(props) {
   return (
   <div className="container">
-    <Banner image="./images/illustration-box-desktop.svg" alt="" />
+    <Banner />
     
     <div className="faq-container">
       
