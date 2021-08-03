@@ -11,7 +11,7 @@ server.get("/api/cards", {cards: [
   },
   { 
     id: "2", 
-    question: "What is the maximum file upload size?What is the maximum file upload size?What is the maximum file upload size?", 
+    question: "What is the maximum file upload size?", 
     answer: "No more than 2GB. All files in your account must fit your allotted storage space."
   },
   { 
