@@ -34,7 +34,7 @@ server.get("/api/cards", {cards: [
 const Cards = () => {
     let [cards, setCards] = useState([])
 
-  useEffect(() => { // fetched the data in thid section.
+  useEffect(() => { 
 
     fetch("/api/cards")
       .then((response) => response.json())
